@@ -11,7 +11,7 @@ def normalize(data):
     max_value = max(data)
 
     def normalize_element(x):
-        return (x - max_value) / (max_value - min_value)
+        return (x - min_value) / (max_value - min_value)
     
     return list(map(normalize_element, data))
 
